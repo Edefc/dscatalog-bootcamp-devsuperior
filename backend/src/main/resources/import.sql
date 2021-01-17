@@ -1,3 +1,3 @@
-insert into tb_category (name) values ('Boos');
+insert into tb_category (name) values ('Books');
 insert into tb_category (name) values ('Electonics');
-insert into tb_category (name) values ('Computes');
+insert into tb_category (name) values ('Computers');
