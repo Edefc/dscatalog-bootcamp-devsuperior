@@ -40,10 +40,10 @@ public class ProductService {
 	public ProductDTO findById(Long id) {
 		try {
 			Optional<Product> obj = repository.findById(id);
-			Product entity = obj.orElseThrow(() -> new EntityNotFoundException("Entidade não encontrada"));
+			Product entity = obj.orElseThrow(() -> new EntityNotFoundException("Product not found"));
 			return new ProductDTO(entity, entity.getCategories());
 		} catch (EntityNotFoundException e) {
-			throw new ResourceNotFoundException("Nota found Id: " + id);
+			throw new ResourceNotFoundException("Not found Id: " + id);
 
 		}
 
