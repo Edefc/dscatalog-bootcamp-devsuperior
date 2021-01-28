@@ -12,18 +12,14 @@ const Catalog = () => {
     const [productResponse, setProductResponse] = useState<ProductResponse>();
     console.log(productResponse);
 
-
     useEffect(() => {
         const params = {
             page: 0,
-            linesPerPage: 5
-
+            linesPerPage: 12
         }
         makeRequest({ url: '/products', params })
             .then(response => setProductResponse(response.data));
-
     }, []);
-
     return (
         <div className="catalog-container">
             <h1 className="catalog-title">
@@ -32,12 +28,11 @@ const Catalog = () => {
             <div className="catalog-products">
                 {productResponse?.content.map(product => (
                     <Link to="/products/1" key={product.id}>
-                        <ProductCard />
+                        <ProductCard product={product}/>
                     </Link>
                 ))}
             </div>
         </div>
-
     );
 }
 export default Catalog;
