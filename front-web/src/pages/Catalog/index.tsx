@@ -4,7 +4,9 @@ import { ProductResponse } from 'core/types/Product';
 import { makeRequest } from 'core/utils/request';
 import ProductCard from './components/ProductCard';
 import ProductCardLoader from './components/Loaders/ProductCardLoader';
+import Pagination from 'core/Pagination';
 import './styles.scss';
+
 
 const Catalog = () => {
     //quando o componente iniciar, buscar a lista de produtos
@@ -42,7 +44,8 @@ const Catalog = () => {
                     ))
                 )}
             </div>
+            <Pagination />
         </div>
-    );
+    )
 }
 export default Catalog;
