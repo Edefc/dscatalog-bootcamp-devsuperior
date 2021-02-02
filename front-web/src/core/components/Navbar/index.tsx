@@ -13,18 +13,18 @@ const Navbar = () => (
 
             <ul className="main-menu">
                 <li>
-                    <NavLink to="/" activeClassName="active" exact>
+                    <NavLink to="/" exact>
                         HOME
                     </NavLink>
                     
                 </li>
                 <li>
-                    <NavLink to="/products" activeClassName="active">
+                    <NavLink to="/products">
                         CATÁLGO
                     </NavLink>
                 </li>
                 <li>
-                    <NavLink to="/admin" activeClassName="active">
+                    <NavLink to="/admin">
                         ADMIN
                     </NavLink>
                 </li>
