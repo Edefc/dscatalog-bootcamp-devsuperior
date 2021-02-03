@@ -2,56 +2,74 @@ import React, { useState } from 'react';
 import BaseForm from '../../BaseForm';
 import './styles.scss';
 
+type FormState = {
+    name: string;
+    category: string;
+    price: string;
+   
+}
+
 const Form = () => {
-    const [name, setName] = useState('');
-    const [category, setCategory] = useState('');
-    const [price, setPrice] = useState('');
+    const [formData, setFormData] = useState<FormState>({
+       name: 'Computador',
+       category: 'eletrônicos',
+       price: ''
 
-    const handleOnChangeName = (event: React.ChangeEvent<HTMLInputElement>) => {
-        setName(event.target.value);
-    }
-    const handleOnChangeCategory = (event: React.ChangeEvent<HTMLSelectElement>) => {
-        setCategory(event.target.value);
+    });
+
+
+    const handleOnChange = (event: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
+       const name = event.target.name;
+        const value = event.target.value;
+        setFormData(data => ( {...data, [name]: value }));
+       // console.log({name, value});
+        
     }
 
-    const handleOnChangePrice = (event: React.ChangeEvent<HTMLInputElement>) => {
-        setPrice(event.target.value);
+
+    const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+        event.preventDefault();
+        console.log(formData);
+
     }
 
     return (
-        <BaseForm title="cadastrar um produto">
-            <h1 className="my-5">
-                Nome={name} <br />
-                Categoria={category}<br />
-                Preço={price}
-            </h1>
+        <form onSubmit={handleSubmit}>
+            <BaseForm title="cadastrar um produto">
+                <div className="row">
+                    <div className="col-6">
+                        <input
+                        value={formData.name}
+                            name="name"
+                            type="text"
+                            className="form-control mb-5"
+                            onChange={handleOnChange}
+                            placeholder='Nome do produto'
+                        />
 
-            <div className="row">
-                <div className="col-6">
-                    <input
-                        value={name}
-                        type="text"
-                        className="form-control mb-5"
-                        onChange={handleOnChangeName}
-                        placeholder='Nome do produto'
-                    />
+                        <select
+                        value={formData.category}
+                            name="category"
+                            className="form-control mb-5"
+                            onChange={handleOnChange}
+                        >
+                            <option value="livros">Livros</option>
+                            <option value="computadores">Computadores</option>
+                            <option value="eletrônicos">Eletrônicos</option>
+                        </select>
 
-                    <select value={category} className="form-control mb-5" onChange={handleOnChangeCategory}>
-                        <option value="livros">Livros</option>
-                        <option value="computadores">Computadores</option>
-                        <option value="eletrônicos">Eletrônicos</option>
-                    </select>
-
-                    <input
-                        value={price}
-                        type="text"
-                        className="form-control mb-5"
-                        onChange={handleOnChangePrice}
-                        placeholder='Price'
-                    />
+                        <input
+                        value={formData.price}
+                            name="price"
+                            type="text"
+                            className="form-control mb-5"
+                            onChange={handleOnChange}
+                            placeholder='Price'
+                        />
+                    </div>
                 </div>
-            </div>
-        </BaseForm>
+            </BaseForm>
+        </form>
     )
 }
 
