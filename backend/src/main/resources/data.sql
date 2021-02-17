@@ -1,24 +1,3 @@
-INSERT INTO tb_client (birth_date, children, cpf, income, name) VALUES (TIMESTAMP WITH TIME ZONE '2020-07-13T20:50:07.12345Z', 1, '254.658.789-98', 200.00, 'Maria dos Santo Almeida');
-INSERT INTO tb_client (birth_date, children, cpf, income, name) VALUES (TIMESTAMP WITH TIME ZONE '2020-12-24T21:35:07.12345Z', 3, '154.659.687-12', 250.00, 'Antonio Marcos de Souza');
-INSERT INTO tb_client (birth_date, children, cpf, income, name) VALUES (TIMESTAMP WITH TIME ZONE '2020-07-13T10:20:07.12345Z', 1, '254.658.789-98', 2500.00, 'Carlos Aberto Moreira');
-INSERT INTO tb_client (birth_date, children, cpf, income, name) VALUES (TIMESTAMP WITH TIME ZONE '2020-07-13T20:50:07.12345Z', 1, '524.154.258-98', 1200.00, 'José Ferreira Martins');
-INSERT INTO tb_client (birth_date, children, cpf, income, name) VALUES (TIMESTAMP WITH TIME ZONE '2020-07-13T20:50:07.12345Z', 2, '958.654.789-25', 200.00, 'Emanuel Carvalho');
-INSERT INTO tb_client (birth_date, children, cpf, income, name) VALUES (TIMESTAMP WITH TIME ZONE '2020-07-13T20:50:07.12345Z', 1, '005.259.654-85', 2050.00, 'Cintia Almeida Maquez');
-INSERT INTO tb_client (birth_date, children, cpf, income, name) VALUES (TIMESTAMP WITH TIME ZONE '2020-07-13T20:50:07.12345Z', 1, '215.548.965-12', 270.00, 'Fernando da Costa Lima');
-INSERT INTO tb_client (birth_date, children, cpf, income, name) VALUES (TIMESTAMP WITH TIME ZONE '2020-07-13T20:50:07.12345Z', 4, '025.654.852-01', 2020.00, 'Douglas Martins');
-INSERT INTO tb_client (birth_date, children, cpf, income, name) VALUES (TIMESTAMP WITH TIME ZONE '2020-07-13T20:50:07.12345Z', 1, '115.654.987-54', 200.00, 'Hélio Gomes');
-INSERT INTO tb_client (birth_date, children, cpf, income, name) VALUES (TIMESTAMP WITH TIME ZONE '2020-07-13T20:50:07.12345Z', 3, '110.147.658-23', 5200.00, 'Walter Albuquerque');
-INSERT INTO tb_client (birth_date, children, cpf, income, name) VALUES (TIMESTAMP WITH TIME ZONE '2020-07-13T20:50:07.12345Z', 1, '098.741.658-24', 2500.00, 'Stefano Magalhão Ferreira');
-INSERT INTO tb_client (birth_date, children, cpf, income, name) VALUES (TIMESTAMP WITH TIME ZONE '2020-07-13T20:50:07.12345Z', 1, '159.753.658-45', 800.00, 'Luiz Fernando Correia');
-INSERT INTO tb_client (birth_date, children, cpf, income, name) VALUES (TIMESTAMP WITH TIME ZONE '2020-07-13T20:50:07.12345Z', 2, '427.528.685-65', 1500.00, 'Joseval Cruz da Costa');
-INSERT INTO tb_client (birth_date, children, cpf, income, name) VALUES (TIMESTAMP WITH TIME ZONE '2020-07-13T20:50:07.12345Z', 1, '234.254.568-78', 5600.00, 'Daniel Siqueira Junior');
-INSERT INTO tb_client (birth_date, children, cpf, income, name) VALUES (TIMESTAMP WITH TIME ZONE '2020-07-13T20:50:07.12345Z', 1, '125.657.854-15', 2065.00, 'Amarildo dos Santos');
-INSERT INTO tb_client (birth_date, children, cpf, income, name) VALUES (TIMESTAMP WITH TIME ZONE '2020-07-13T20:50:07.12345Z', 1, '124.251.231-56', 2050.00, 'Jair da Veiga');
-INSERT INTO tb_client (birth_date, children, cpf, income, name) VALUES (TIMESTAMP WITH TIME ZONE '2020-07-13T20:50:07.12345Z', 1, '741.256.654-25', 1200.00, 'Wanderley Iplinsk Junior');
-INSERT INTO tb_client (birth_date, children, cpf, income, name) VALUES (TIMESTAMP WITH TIME ZONE '2020-07-13T20:50:07.12345Z', 1, '101.232.256.12', 2400.00, 'Otaviano Bruno de Lara');
-INSERT INTO tb_client (birth_date, children, cpf, income, name) VALUES (TIMESTAMP WITH TIME ZONE '2020-07-13T20:50:07.12345Z', 2, '100.124.658.56', 2360.00, 'Sanuel Oliveira');
-INSERT INTO tb_client (birth_date, children, cpf, income, name) VALUES (TIMESTAMP WITH TIME ZONE '2020-07-13T20:50:07.12345Z', 1, '054.650.709-90', 2980.00, 'Angelo Sampaio Lima');
-
 INSERT INTO tb_category (name, created_At) VALUES ('Livros', NOW());
 INSERT INTO tb_category (name, created_At) VALUES ('Eletrônicos', NOW());
 INSERT INTO tb_category (name, created_At) VALUES ('Computadores', NOW());
@@ -75,3 +54,34 @@ INSERT INTO tb_product_category (product_id, category_id) VALUES (22, 3);
 INSERT INTO tb_product_category (product_id, category_id) VALUES (23, 3);
 INSERT INTO tb_product_category (product_id, category_id) VALUES (24, 3);
 INSERT INTO tb_product_category (product_id, category_id) VALUES (25, 3);
+
+INSERT INTO tb_client (birth_date, children, cpf, income, name) VALUES (TIMESTAMP WITH TIME ZONE '2020-07-13T20:50:07.12345Z', 100, '254.658.789-98', 200.00, 'Maria dos Santo Almeida');
+INSERT INTO tb_client (birth_date, children, cpf, income, name) VALUES (TIMESTAMP WITH TIME ZONE '2020-12-24T21:35:07.12345Z', 100, '154.659.687-12', 250.00, 'Antonio Marcos de Souza');
+INSERT INTO tb_client (birth_date, children, cpf, income, name) VALUES (TIMESTAMP WITH TIME ZONE '2020-07-13T10:20:07.12345Z', 100, '254.658.789-98', 2500.00, 'Carlos Aberto Moreira');
+INSERT INTO tb_client (birth_date, children, cpf, income, name) VALUES (TIMESTAMP WITH TIME ZONE '2020-07-13T20:50:07.12345Z', 100, '524.154.258-98', 1200.00, 'José Ferreira Martins');
+INSERT INTO tb_client (birth_date, children, cpf, income, name) VALUES (TIMESTAMP WITH TIME ZONE '2020-07-13T20:50:07.12345Z', 100, '958.654.789-25', 200.00, 'Emanual Carvalho');
+INSERT INTO tb_client (birth_date, children, cpf, income, name) VALUES (TIMESTAMP WITH TIME ZONE '2020-07-13T20:50:07.12345Z', 100, '005.259.654-85', 2050.00, 'Cintia Almeida Maquez');
+INSERT INTO tb_client (birth_date, children, cpf, income, name) VALUES (TIMESTAMP WITH TIME ZONE '2020-07-13T20:50:07.12345Z', 100, '215.548.965-12', 270.00, 'Fernando da Costa Lima');
+INSERT INTO tb_client (birth_date, children, cpf, income, name) VALUES (TIMESTAMP WITH TIME ZONE '2020-07-13T20:50:07.12345Z', 100, '025.654.852-01', 2020.00, 'Douglas Martins');
+INSERT INTO tb_client (birth_date, children, cpf, income, name) VALUES (TIMESTAMP WITH TIME ZONE '2020-07-13T20:50:07.12345Z', 100, '115.654.987-54', 200.00, 'Hélio Gomes');
+INSERT INTO tb_client (birth_date, children, cpf, income, name) VALUES (TIMESTAMP WITH TIME ZONE '2020-07-13T20:50:07.12345Z', 100, '110.147.658-23', 5200.00, 'Walter Albuquerque');
+INSERT INTO tb_client (birth_date, children, cpf, income, name) VALUES (TIMESTAMP WITH TIME ZONE '2020-07-13T20:50:07.12345Z', 100, '098.741.658-24', 2500.00, 'Stefano Magalhão Ferreira');
+INSERT INTO tb_client (birth_date, children, cpf, income, name) VALUES (TIMESTAMP WITH TIME ZONE '2020-07-13T20:50:07.12345Z', 100, '159.753.658-45', 800.00, 'Luiz Fernando Correia');
+INSERT INTO tb_client (birth_date, children, cpf, income, name) VALUES (TIMESTAMP WITH TIME ZONE '2020-07-13T20:50:07.12345Z', 100, '427.528.685-65', 1500.00, 'Joseval Cruz da Costa');
+INSERT INTO tb_client (birth_date, children, cpf, income, name) VALUES (TIMESTAMP WITH TIME ZONE '2020-07-13T20:50:07.12345Z', 100, '234.254.568-78', 5600.00, 'Daniel Siqueira Junior');
+INSERT INTO tb_client (birth_date, children, cpf, income, name) VALUES (TIMESTAMP WITH TIME ZONE '2020-07-13T20:50:07.12345Z', 100, '125.657.854-15', 2065.00, 'Amarildo dos Santos');
+INSERT INTO tb_client (birth_date, children, cpf, income, name) VALUES (TIMESTAMP WITH TIME ZONE '2020-07-13T20:50:07.12345Z', 100, '124.251.231-56', 2050.00, 'Jair da Veiga');
+INSERT INTO tb_client (birth_date, children, cpf, income, name) VALUES (TIMESTAMP WITH TIME ZONE '2020-07-13T20:50:07.12345Z', 100, '741.256.654-25', 1200.00, 'Wanderley Iplinsk Junior');
+INSERT INTO tb_client (birth_date, children, cpf, income, name) VALUES (TIMESTAMP WITH TIME ZONE '2020-07-13T20:50:07.12345Z', 100, '101.232.256.12', 2400.00, 'Otaviano Bruno de Lara');
+INSERT INTO tb_client (birth_date, children, cpf, income, name) VALUES (TIMESTAMP WITH TIME ZONE '2020-07-13T20:50:07.12345Z', 100, '100.124.658.56', 2360.00, 'Sanuel Oliveira');
+INSERT INTO tb_client (birth_date, children, cpf, income, name) VALUES (TIMESTAMP WITH TIME ZONE '2020-07-13T20:50:07.12345Z', 100, '054.650.709-90', 2980.00, 'Angelo Sampaio Lima');
+
+INSERT INTO tb_user (first_name, last_name, email, password) VALUES ('Alex', 'Brown', 'alex@gmail.com', '$2a$10$eACCYoNOHEqXve8aIWT8Nu3PkMXWBaOxJ9aORUYzfMQCbVBIhZ8tG');
+INSERT INTO tb_user (first_name, last_name, email, password) VALUES ('Maria', 'Green', 'maria@gmail.com', '$2a$10$eACCYoNOHEqXve8aIWT8Nu3PkMXWBaOxJ9aORUYzfMQCbVBIhZ8tG');
+
+INSERT INTO tb_role (authority) VALUES ('ROLE_OPERATOR');
+INSERT INTO tb_role (authority) VALUES ('ROLE_ADMIN');
+
+INSERT INTO tb_user_role (user_id, role_id) VALUES (1, 1);
+INSERT INTO tb_user_role (user_id, role_id) VALUES (2, 1);
+INSERT INTO tb_user_role (user_id, role_id) VALUES (2, 2);
