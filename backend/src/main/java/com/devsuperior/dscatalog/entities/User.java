@@ -4,6 +4,7 @@ import java.io.Serializable;
 import java.util.HashSet;
 import java.util.Set;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
@@ -22,8 +23,10 @@ public class User implements Serializable {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
-	private String FirstName;
+	private String firstName;
 	private String lastName;
+	
+	@Column(unique = true )
 	private String email;
 	private String password;
 	
@@ -39,7 +42,7 @@ public class User implements Serializable {
 	public User(Long id, String firstName, String lastName, String email, String password) {
 		super();
 		this.id = id;
-		FirstName = firstName;
+		this.firstName = firstName;
 		this.lastName = lastName;
 		this.email = email;
 		this.password = password;
@@ -54,11 +57,11 @@ public class User implements Serializable {
 	}
 
 	public String getFirstName() {
-		return FirstName;
+		return firstName;
 	}
 
 	public void setFirstName(String firstName) {
-		FirstName = firstName;
+		this.firstName = firstName;
 	}
 
 	public String getLastName() {
@@ -113,10 +116,4 @@ public class User implements Serializable {
 			return false;
 		return true;
 	}
-	
-	
-	
-	
-	
-
 }
