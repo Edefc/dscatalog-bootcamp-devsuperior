@@ -13,13 +13,13 @@ import com.devsuperior.dscatalog.entities.User;
 import com.devsuperior.dscatalog.repositories.UserRepository;
 import com.devsuperior.dscatalog.resources.exceptions.FieldMessage;
 
-public class UserInsertValidator implements ConstraintValidator<UserInsertValid, UserInsertDTO> {
+public class UserUpdateValidator implements ConstraintValidator<UserUpdateValid, UserInsertDTO> {
 	
 	@Autowired
 	private UserRepository repository;
 	
 	@Override
-	public void initialize(UserInsertValid ann) {
+	public void initialize(UserUpdateValid ann) {
 	}
 
 	@Override
